@@ -5,4 +5,5 @@ import os
 import csv
 
 # What are our variables?
-    
+total = 0
+
