@@ -3,6 +3,10 @@
 import os
 import csv
 
+#data path
+data_csv = os.path.join("Resources", "election_data.csv")
+
+
 #variable
 total_votes = 0
 candidates_votes ={}

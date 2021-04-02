@@ -5,6 +5,8 @@ import os
 import csv
 
 # data path
+data_csv = os.path.join("Resources", "election_data.csv")
+
 # data_csv = os.path.join("Resources", "budget_data.csv")
 # file_path = "Resources/budget_data.csv"
 
