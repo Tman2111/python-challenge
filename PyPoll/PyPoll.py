@@ -37,3 +37,20 @@ with open('election_data.csv') as csv_file:
             votes_for[candidate_index] += 1
 
 # print(total_votes)
+    for votes in votes_for:
+        percent = round((votes/total_votes)*100, 2)
+        percent = "%.3f%%" % percent
+        percent_of_vote.append(percent)
+
+ # declare a winner  
+winner =max(votes_for)  
+index = votes_for.index(winner)
+elected = candidates[index]   
+
+# Let's see the results
+print("Election Results")
+print("------------------------")
+print("Total Votes: {total_votes}")
+print("------------------------")
+# for i in range(len(candidates)):
+# print(f"{candidates[i]}: {str(percent_of_vote[i])} ({str(votes_for[i])}"
