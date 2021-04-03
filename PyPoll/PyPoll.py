@@ -26,16 +26,14 @@ with open('election_data.csv') as csv_file:
         #Get the total vote count
         total_votes = total_votes + 1
         
-        # tally the votes
-
+        # tally the votes for each cadidate
         if row[2] not in candidates:
             candidates.append(row[2])
             candidate_index = candidates.index(row[2])
             votes_for.append(1)
 
         else:
-            candidate_index = candidate.index(row[2])
-            votes_for[index] += 1
+            candidate_index = candidates.index(row[2])
+            votes_for[candidate_index] += 1
 
-print(total_votes)
-print([candidates])
+# print(total_votes)
