@@ -50,7 +50,9 @@ elected = candidates[index]
 # Let's see the results
 print("Election Results")
 print("------------------------")
-print("Total Votes: {total_votes}")
+print(f'Total Votes: {total_votes}')
 print("------------------------")
-# for i in range(len(candidates)):
-# print(f"{candidates[i]}: {str(percent_of_vote[i])} ({str(votes_for[i])}"
+for i in range(len(candidates)):
+    print(f"{candidates[i]}: {str(percent_of_vote[i])} ({str(votes_for[i])}")
+print("------------------------")
+print(f"Winner: {elected}")
