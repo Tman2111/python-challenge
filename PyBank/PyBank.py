@@ -83,7 +83,7 @@ with open(PyBank_results, "w") as outfile:
     outfile.write(f"Total:  $  {total_net_change}\n")
     outfile.write(f"Average Change:  $  {avg_pl}\n")
     outfile.write(f"Greatest Increase in Profits:  {most_month} (${highest_change})\n)")
-    outfile.write(f"Greatest Increase in Losses:   {least_month} (${least_month} (${least_change}\n)")
+    outfile.write(f"Greatest Increase in Losses:   {least_month} (${lowest_change}\n)")
 
         
 
