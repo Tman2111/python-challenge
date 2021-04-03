@@ -31,7 +31,7 @@ with open('budget_data.csv', 'r') as csv_file:
         
         if (total_months == 1):
             pm_pl = cm_pl
-        continue
+            continue
 
         else:
 
@@ -48,8 +48,8 @@ with open('budget_data.csv', 'r') as csv_file:
             pm_pl = cm_pl
     
     # calculate sum of changes and average change
-    sum_pl = sum(monthly_change)
-    avg_pl = round(sum_pl/total_months - 1), 2)
+    sum_pl = sum(monthly_change_list)
+    avg_pl = round((sum_pl/total_months - 1), 2)
 
     # find highest and lowest changes 
     highest_change = max(monthly_change_list)
