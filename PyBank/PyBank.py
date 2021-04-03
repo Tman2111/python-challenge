@@ -11,11 +11,10 @@ data_csv = os.path.join("Resources", "budget_data.csv")
 # Initialize our variables
 total_months = 0
 total_net_change = 0
-greatest_increase = ["", 0]
-greatest_decrease = ["", 99999999999999]
-net_change_list = []
-
-
+cm_pl = 0
+pm_pl = 867884
+pl_change = 0
+total_change_list =[]
 # read data_csv
 with open('budget_data.csv', 'r') as csv_file:
 
@@ -23,20 +22,25 @@ with open('budget_data.csv', 'r') as csv_file:
     csvreader = csv.reader(csv_file, delimiter=',')
 # remove header row from calculations 
     csv_header = next(csv_file)
-    # prev_net_change = int(row[1])
-    # net_net_change = int(row[1]) - prevchange
-
     #Loop through the csv_file
     for row in csvreader:
         total_months += 1
         total_net_change += int(row[1])
-        # net_change = int(row[1]) - prevchange
-        #net_change = int
-        # count_months=len(list(csvreader(open('budget.data.csv'))))-1
-        # net_total_p_and_l = 
-print(total_months)
-print(total_net_change)
+        cm_pl = cm_pl
+        total_change = cm_pl - pm_pl
+        total_change_list.append(total_change)
 
+
+
+
+# print(total_months)
+print(total_change_list)
+
+
+print("Financial Analysis")
+print("-----------------------------------")
+print("Total months: " + str(total_months))
+print("Total: $" +str(total_net_change)) 
 
         
 
