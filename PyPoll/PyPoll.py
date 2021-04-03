@@ -58,17 +58,17 @@ print("------------------------")
 print(f"Winner: {elected}")
 
 # Results text file
-PyPoll_results = os.pat.join("Output", election_data.text)
-with open(PyPoll_results, "w") as outfile:
-    outfile.write("Election Results\n")
-    outfile.write("---------------\n")
-    outfile.write("Total votes: {total_votes}\n")
-    outfile.write("---------------\n")
-    for i in range(len(candidates)):
-        outfile.write("f"[candidates[i]] [str(percent_of_vote[i])] ([str(votes_for[i])]
-    outfile.write("---------------")
-    outfile.write(f"Winner: {elected}\n")
-    outfile.write('---------------')
+# PyPoll_results = os.pat.join("Output", election_data.text)
+# with open(PyPoll_results, "w") as outfile:
+#     outfile.write("Election Results\n")
+#     outfile.write("---------------\n")
+#     outfile.write("Total votes: {total_votes}\n")
+#     outfile.write("---------------\n")
+#     for i in range(len(candidates)):
+#         outfile.write("f"[candidates[i]] [str(percent_of_vote[i])] ([str(votes_for[i])]
+#     outfile.write("---------------")
+#     outfile.write(f"Winner: {elected}\n")
+#     outfile.write('---------------')
 
 
 
