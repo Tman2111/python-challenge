@@ -46,20 +46,22 @@ with open('budget_data.csv', 'r') as csv_file:
 
             # reset prev month to current month
             pm_pl = cm_pl
+    
+    # calculate sum of changes and average change
+    sum_pl = sum(monthly_change)
+    avg_pl = round(sum_pl/total_months - 1), 2)
 
-sum_pl = sum(monthly_change)
-avg_pl = round(sum_pl/total_months - 1), 2)
+    # find highest and lowest changes 
+    highest_change = max(monthly_change_list)
+    lowest_change = min(monthly_change_list)
 
-highest_change = max(monthly_change_list)
-lowest_change = min(monthly_change_list)
+    # index highest and lowest to month list
+    highest_c_i = monthly_change_list.index(highest_change)
+    lowest_c_i = monthly_change_list.index(lowest_change)
 
-highest_c_i = monthly_change_list.index(highest_change)
-lowest_c_i = monthly_change_list.index(lowest_change)
-
-most_month = months[highest_c_i]
-least_month = months[lowest_c_i]
-
-
+    # declare highest and lowest months 
+    most_month = months[highest_c_i]
+    least_month = months[lowest_c_i]
 
 # printing to terminal
 print("Financial Analysis")
@@ -77,9 +79,11 @@ with open(PyBank_results, "w") as outfile:
 
     outfile.write("Financial Analysis\n")
     outfile.write("----------------------------\n")
-    outfile.write("Total months:  {total_months}\n")
-    outfile.write()
-    outfile.write("Average Change:  $")
+    outfile.write(f"Total months:  {total_months}\n")
+    outfile.write(f"Total:  $  {total_net_change}\n")
+    outfile.write(f"Average Change:  $  {avg_pl}\n")
+    outfile.write(f"Greatest Increase in Profits:  {most_month} (${highest_change})\n)")
+    outfile.write(f"Greatest Increase in Losses:   {least_month} (${least_month} (${least_change}\n)")
 
         
 
